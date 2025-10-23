@@ -15,7 +15,7 @@ Kelas: [TI 24.A5]
 ## Langkah 1: Pengenalan JavaScript
 File: `lab5_javascript.html`
 
-![Screenshot 1](screenshots/1.png)
+![Screenshot 1](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20183523.png?raw=true)
 
 **Penjelasan:**
 - `document.write()` menulis ke halaman HTML
@@ -26,7 +26,7 @@ File: `lab5_javascript.html`
 ## Langkah 2: JavaScript Alert
 File: `alert.html`
 
-![Screenshot 2](screenshots/2.png)
+![Screenshot 2](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20183704.png?raw=true)
 
 **Penjelasan:**
 - `window.alert()` menampilkan kotak dialog
@@ -36,7 +36,7 @@ File: `alert.html`
 ## Langkah 3: Method dalam Objek
 File: `method_objek.html`
 
-![Screenshot 3](screenshots/3.png)
+![Screenshot 3](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20183745.png?raw=true)
 
 **Penjelasan:**
 - Method bisa dipanggil berkali-kali
@@ -46,7 +46,7 @@ File: `method_objek.html`
 ## Langkah 4: JavaScript Prompt
 File: `prompt.html`
 
-![Screenshot 4](screenshots/4.png)
+![Screenshot 4](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20183827.png?raw=true)
 
 **Penjelasan:**
 - `prompt()` untuk input dari user
@@ -56,7 +56,7 @@ File: `prompt.html`
 ## Langkah 5: Fungsi JavaScript
 File: `fungsi.html`
 
-![Screenshot 5](screenshots/5.png)
+![Screenshot 5](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20183945.png?raw=true)
 
 **Penjelasan:**
 - Fungsi dipanggil dengan event onclick
@@ -66,7 +66,7 @@ File: `fungsi.html`
 ## Langkah 6: Operasi Aritmatika
 File: `aritmatika.html`
 
-![Screenshot 6](screenshots/6.png)
+![Screenshot 6](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20184012.png?raw=true)
 
 **Penjelasan:**
 - JavaScript mendukung operasi matematika
@@ -76,7 +76,7 @@ File: `aritmatika.html`
 ## Langkah 7: Kondisi IF-ELSE
 File: `if_else.html`
 
-![Screenshot 7](screenshots/7.png)
+![Screenshot 7](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20184044.png?raw=true)
 
 **Penjelasan:**
 - Percabangan dengan if-else
@@ -86,7 +86,7 @@ File: `if_else.html`
 ## Langkah 8: Switch Case
 File: `switch.html`
 
-![Screenshot 8](screenshots/8.png)
+![Screenshot 8](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20184110.png?raw=true)
 
 **Penjelasan:**
 - Switch untuk multiple kondisi
@@ -96,7 +96,7 @@ File: `switch.html`
 ## Langkah 9: Form Input
 File: `form_input.html`
 
-![Screenshot 9](screenshots/9.png)
+![Screenshot 9](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20184141.png?raw=true)
 
 **Penjelasan:**
 - Manipulasi input dengan getElementById
@@ -106,7 +106,7 @@ File: `form_input.html`
 ## Langkah 10: Form Button
 File: `form_button.html`
 
-![Screenshot 10](screenshots/10.png)
+![Screenshot 10](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20184206.png?raw=true)
 
 **Penjelasan:**
 - Mengubah style dengan JavaScript
@@ -116,7 +116,7 @@ File: `form_button.html`
 ## Langkah 11: CheckBox
 File: `checkbox.html`
 
-![Screenshot 11](screenshots/11.png)
+![Screenshot 11](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20184228.png?raw=true)
 
 **Penjelasan:**
 - Perhitungan otomatis dengan checkbox
@@ -126,7 +126,7 @@ File: `checkbox.html`
 ## TUGAS: Form Validasi
 File: `form_validasi.html`
 
-![Screenshot 12](screenshots/12.png)
+![Screenshot 12](https://github.com/MuhammadArkham/Lab5Web/blob/main/FOTO/Screenshot%202025-10-23%20184338.png?raw=true)
 
 **Penjelasan Validasi:**
 
@@ -144,14 +144,3 @@ File: `form_validasi.html`
 
 ---
 
-## Kesimpulan
-Praktikum ini berhasil mendemonstrasikan penggunaan JavaScript untuk:
-- Manipulasi DOM
-- Event handling
-- Validasi form
-- Operasi logika
-
----
-
-## Validasi W3C
-Semua file HTML telah divalidasi di http://validator.w3.org
