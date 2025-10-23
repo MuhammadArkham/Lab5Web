@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Input</title>
+    <script>
+        function hitung() {
+            var bil1 = document.getElementById('bil1').value;
+            var bil2 = document.getElementById('bil2').value;
+            bil1 = parseInt(bil1);
+            bil2 = parseInt(bil2);
+            var hasil = bil1 + bil2;
+            document.getElementById('hasil').value = hasil;
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Input</h1>
+    <form>
+        Bilangan 1: <input type="text" id="bil1"><br><br>
+        Bilangan 2: <input type="text" id="bil2"><br><br>
+        <button type="button" onclick="hitung()">Hitung</button><br><br>
+        Hasil: <input type="text" id="hasil" readonly>
+    </form>
+</body>
+</html>

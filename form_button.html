@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Button</title>
+    <script>
+        function ubahWarnaLB(warna) {
+            document.body.style.backgroundColor = warna;
+        }
+        
+        function ubahWarnaLD(warna) {
+            document.getElementById('kotak').style.backgroundColor = warna;
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Button</h1>
+    <h2>Ubah Warna Background</h2>
+    <button onclick="ubahWarnaLB('red')">Merah</button>
+    <button onclick="ubahWarnaLB('blue')">Biru</button>
+    <button onclick="ubahWarnaLB('green')">Hijau</button>
+    <br><br>
+    
+    <h2>Ubah Warna Div</h2>
+    <button onclick="ubahWarnaLD('yellow')">Kuning</button>
+    <button onclick="ubahWarnaLD('pink')">Pink</button>
+    <button onclick="ubahWarnaLD('orange')">Orange</button>
+    <br><br>
+    
+    <div id="kotak" style="width:200px; height:200px; border:1px solid black;">
+        Ini adalah div
+    </div>
+</body>
+</html>

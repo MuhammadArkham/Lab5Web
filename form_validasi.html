@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input.error {
+            border-color: red;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Registrasi</h1>
+        <form name="formRegistrasi" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama">
+                <div class="error-message" id="namaError">Nama harus diisi!</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <div class="error-message" id="emailError">Email tidak valid!</div>
+            </div>
+
+            <div class="form-group">
+                <label for="umur">Umur:</label>
+                <input type="text" id="umur" name="umur">
+                <div class="error-message" id="umurError">Umur harus angka dan minimal 17 tahun!</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <div class="error-message" id="passwordError">Password minimal 6 karakter!</div>
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat">
+                <div class="error-message" id="alamatError">Alamat harus diisi!</div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Reset semua error
+            var inputs = document.querySelectorAll('input');
+            for(var i = 0; i < inputs.length; i++) {
+                inputs[i].classList.remove('error');
+            }
+            var errors = document.querySelectorAll('.error-message');
+            for(var i = 0; i < errors.length; i++) {
+                errors[i].style.display = 'none';
+            }
+
+            var isValid = true;
+
+            // Validasi Nama
+            var nama = document.getElementById('nama').value;
+            if(nama == "" || nama == null) {
+                document.getElementById('nama').classList.add('error');
+                document.getElementById('namaError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi Email
+            var email = document.getElementById('email').value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(email == "" || !emailPattern.test(email)) {
+                document.getElementById('email').classList.add('error');
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi Umur
+            var umur = document.getElementById('umur').value;
+            if(umur == "" || isNaN(umur) || umur < 17) {
+                document.getElementById('umur').classList.add('error');
+                document.getElementById('umurError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi Password
+            var password = document.getElementById('password').value;
+            if(password == "" || password.length < 6) {
+                document.getElementById('password').classList.add('error');
+                document.getElementById('passwordError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi Alamat
+            var alamat = document.getElementById('alamat').value;
+            if(alamat == "" || alamat == null) {
+                document.getElementById('alamat').classList.add('error');
+                document.getElementById('alamatError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Jika semua validasi berhasil
+            if(isValid) {
+                window.alert("Form berhasil disubmit!\n\nNama: " + nama + "\nEmail: " + email + "\nUmur: " + umur + "\nAlamat: " + alamat);
+                return true;
+            } else {
+                window.alert("Mohon lengkapi form dengan benar!");
+                return false;
+            }
+        }
+
+        // Validasi real-time saat input kehilangan fokus
+        document.getElementById('nama').addEventListener('blur', function() {
+            if(this.value != "") {
+                this.classList.remove('error');
+                document.getElementById('namaError').style.display = 'none';
+            }
+        });
+
+        document.getElementById('email').addEventListener('blur', function() {
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(emailPattern.test(this.value)) {
+                this.classList.remove('error');
+                document.getElementById('emailError').style.display = 'none';
+            }
+        });
+
+        document.getElementById('umur').addEventListener('blur', function() {
+            if(this.value != "" && !isNaN(this.value) && this.value >= 17) {
+                this.classList.remove('error');
+                document.getElementById('umurError').style.display = 'none';
+            }
+        });
+
+        document.getElementById('password').addEventListener('blur', function() {
+            if(this.value.length >= 6) {
+                this.classList.remove('error');
+                document.getElementById('passwordError').style.display = 'none';
+            }
+        });
+
+        document.getElementById('alamat').addEventListener('blur', function() {
+            if(this.value != "") {
+                this.classList.remove('error');
+                document.getElementById('alamatError').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

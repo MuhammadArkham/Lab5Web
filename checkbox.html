@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CheckBox dan Perhitungan</title>
+    <script>
+        function hitungTotal() {
+            var total = 0;
+            
+            if (document.getElementById('item1').checked) {
+                total += 10000;
+            }
+            if (document.getElementById('item2').checked) {
+                total += 15000;
+            }
+            if (document.getElementById('item3').checked) {
+                total += 20000;
+            }
+            if (document.getElementById('item4').checked) {
+                total += 25000;
+            }
+            
+            document.getElementById('total').value = "Rp " + total.toLocaleString();
+        }
+    </script>
+</head>
+<body>
+    <h1>Daftar Menu Makanan</h1>
+    <form>
+        <input type="checkbox" id="item1" onclick="hitungTotal()"> Nasi Goreng (Rp 10.000)<br>
+        <input type="checkbox" id="item2" onclick="hitungTotal()"> Mie Goreng (Rp 15.000)<br>
+        <input type="checkbox" id="item3" onclick="hitungTotal()"> Ayam Goreng (Rp 20.000)<br>
+        <input type="checkbox" id="item4" onclick="hitungTotal()"> Sate (Rp 25.000)<br><br>
+        
+        <strong>Total: </strong>
+        <input type="text" id="total" readonly value="Rp 0">
+    </form>
+</body>
+</html>

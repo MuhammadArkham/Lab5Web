@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Switch Case</title>
+</head>
+<body>
+    <h1>Switch Case</h1>
+    <script>
+        var hari = prompt("Masukkan nama hari (1-7):", "");
+        hari = parseInt(hari);
+        var namaHari;
+        
+        switch(hari) {
+            case 1:
+                namaHari = "Senin";
+                break;
+            case 2:
+                namaHari = "Selasa";
+                break;
+            case 3:
+                namaHari = "Rabu";
+                break;
+            case 4:
+                namaHari = "Kamis";
+                break;
+            case 5:
+                namaHari = "Jumat";
+                break;
+            case 6:
+                namaHari = "Sabtu";
+                break;
+            case 7:
+                namaHari = "Minggu";
+                break;
+            default:
+                namaHari = "Tidak valid";
+        }
+        
+        document.write("Hari ke-" + hari + " adalah: " + namaHari);
+    </script>
+</body>
+</html>
